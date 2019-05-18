@@ -1,0 +1,15 @@
+
+
+<div class="wrapper" *ngFor="let artist of singleArtist">
+
+  <div>
+      <h1> {{artist.name}}</h1>
+      <img [src]="artist.meta | safeUrl" alt="">
+  </div> 
+
+  <div class="song" >
+    <div *ngFor="let song of songs">{{song.title}}</div>
+   
+  </div>
+
+</div>

@@ -1,0 +1,15 @@
+<div class="wrapper">
+    <div class="content">
+        <div>
+          <h1> Hotest Artists </h1>
+        </div>
+      
+        <ng-container *ngFor="let artist of artists">
+          <div class="artist" *ngIf="artist.genre=='POP'" routerLink="/Artist/{{artist.id}}">
+            <img [src]="artist.meta | safeUrl" alt="">
+            <span>{{artist.name}}</span>
+          </div>
+        </ng-container>
+      
+      </div>
+</div>
